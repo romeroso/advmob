@@ -1,0 +1,66 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+ const [titleText, setTitleText] = useState ("Jaemyl Romeroso"); 
+  const bodyText = 'im documentary assistant the strugles that i encounter is not co-operating member that also giving me stress and strugle for my sysarc 1&2 being documenter i manage all i can and do my best and when the defence we encounter a lot of problem show because of non co opertation and we got alot of question because the pannel is saw a lot wrong code on are system program because of that do alot of changes for my  documents and learn anot because of that';
+
+  const onPressTitle = () => {
+    setTitleText("jaemyl romeroso");
+  };
+  
+  const BoldAndBeautiful = () => (
+  <SafeAreaProvider>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.baseText}>
+        I am bold
+        <Text style={styles.innerText}> and red</Text>
+      </Text>
+    </SafeAreaView>
+  </SafeAreaProvider>
+);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 2,
+  },
+  baseText: {
+    fontWeight: 'bold',
+  },
+  innerText: {
+    color: 'red',
+  },
+});
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text>
+          <Text numberOfLines={5}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: '',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: '',
+    backgroundColor : ''
+  },
+});
+
+export default TextInANest;
