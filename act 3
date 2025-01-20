@@ -1,0 +1,17 @@
+import React from 'react';
+import {View,text} from 'react-native';
+import{SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const ViewBoxesWithColorAndText = () => {
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{height:1000, flexDirection: 'row'}}>
+      <View style={{backgroundColor: 'blue', flex:0.5}}/>
+      <View style={{backgroundColor: 'red', flex:0.5}}/>
+      <Text>hellow World!</Text>
+      </SafeAreaView>
+      </SafeAreaProvider>
+  );
+};
+
+export default ViewBoxesWithColorAndText;
